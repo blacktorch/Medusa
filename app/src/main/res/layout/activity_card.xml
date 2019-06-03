@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardActivity">
+
+    <com.chidiebere.medusa.views.CreditCardView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        android:id="@+id/card_view"
+        android:layout_width="fill_parent"
+        android:layout_height="225dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginEnd="4dp"
+        app:cardNumberTextColor="#fff"
+        app:cardNumberFormat="masked_all_but_last_four"
+        app:cardNameTextColor="#cccccc"
+        app:isFlippable="true"
+        app:type="mastercard"
+        app:expiryDateTextColor="#fff"
+        app:isEditable="true"
+        app:validTillTextColor="#fff"
+        app:isCardNumberEditable="false"
+        app:isCardNameEditable="false"
+        app:isCvvEditable="false"
+        app:isExpiryDateEditable="false"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddd"
+    tools:context=".ManualEditActivity">
+
+    <TextView
+        android:id="@+id/me_title"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter card details"
+        android:padding="16dp" />
+
+    <LinearLayout
+        android:elevation="4dp"
+        android:id="@+id/main_card_layout"
+        android:layout_below="@id/me_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#fff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textColorHint="#777777"
+                app:theme="@style/EditTextThemeME">
+                <EditText android:id="@+id/input_card_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="#555555"
+                    android:paddingBottom="8dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/edittext_me"
+                    android:hint="Card Number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/card_type_logo"
+                android:layout_width="64dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textColorHint="#777777"
+                app:theme="@style/EditTextThemeME">
+                <EditText android:id="@+id/input_expiry_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:textColor="#555555"
+                    android:paddingBottom="8dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/edittext_me"
+                    android:hint="MM/YY" />
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textColorHint="#777777"
+                app:theme="@style/EditTextThemeME">
+                <EditText android:id="@+id/input_cvv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="#555555"
+                    android:paddingBottom="8dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/edittext_me"
+                    android:hint="CVV" />
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:src="@drawable/cvv_logo"
+                android:layout_width="40dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textColorHint="#777777"
+                app:theme="@style/EditTextThemeME">
+                <EditText android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:textColor="#555555"
+                    android:paddingBottom="8dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/edittext_me"
+                    android:hint="Card Holder" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_card_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_below="@id/main_card_layout"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#fff"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:text="Add Card"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

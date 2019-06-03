@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CaptureActivity">
+
+    <SurfaceView
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/top_shade"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#88000000"/>
+
+    <View
+        android:id="@+id/left_shade"
+        android:layout_width="8dp"
+        android:layout_height="0dp"
+        android:background="#88000000"
+        app:layout_constraintBottom_toTopOf="@id/bottom_shade"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_shade"
+        app:layout_constraintVertical_bias="0.59000003" />
+
+    <View
+        android:id="@+id/right_shade"
+        android:layout_width="8dp"
+        android:layout_height="0dp"
+        android:background="#88000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_shade"
+        app:layout_constraintTop_toBottomOf="@id/top_shade" />
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/card_layout"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        android:id="@+id/bottom_shade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#88000000"/>
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="220dp"
+        android:id="@+id/card_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="#fff"
+        android:textSize="20sp"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/card_num"
+        android:id="@+id/card_exp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="#fff"
+        android:textSize="18sp"/>
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/card_exp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/card_name"
+        android:paddingStart="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textColor="#fff"
+        android:textSize="18sp"/>
+
+    <View
+        android:id="@+id/base_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toTopOf="@id/manual_edit_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/position_card_view" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/card_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/right_shade"
+        app:layout_constraintStart_toEndOf="@id/left_shade"
+        app:layout_constraintTop_toBottomOf="@id/top_shade">
+
+
+        <View
+            android:id="@+id/card"
+            android:layout_width="wrap_content"
+            android:layout_height="225dp"
+            android:background="@drawable/card_shape" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@+id/card"
+            android:layout_alignLeft="@id/card"
+            android:layout_alignRight="@+id/card"
+            android:layout_alignTop="@id/card"
+            android:background="@drawable/frame" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/card_layout"
+        android:id="@+id/position_card_view"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="Place your card within this frame."
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        app:layout_constraintTop_toTopOf="@id/base_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/capture_card_view"
+        android:gravity="center_horizontal"
+        android:text="Capture Card"
+        android:textColor="#000"
+        android:textSize="28sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/capture_card_view"
+        android:id="@+id/or_card_view"
+        android:layout_below="@id/capture_card_view"
+        android:gravity="center_horizontal"
+        android:text="Extract card details"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/manual_edit_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:textColor="#fff"
+            android:gravity="center_horizontal"
+            android:textSize="16sp"
+            android:text="Manually Input Card Details"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

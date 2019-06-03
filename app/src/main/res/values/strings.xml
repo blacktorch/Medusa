@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Medusa</string>
+    <string name="font_path">fonts/Roboto-Regular.ttf</string>
+    <string name="valid_thru">VALID THRU</string>
+</resources>
